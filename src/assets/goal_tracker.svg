@@ -1,0 +1,29 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Fundo circular -->
+  <circle cx="100" cy="100" r="95" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2" />
+
+  <!-- Alvo -->
+  <circle cx="100" cy="100" r="70" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2" />
+  <circle cx="100" cy="100" r="50" fill="#d1d5db" stroke="#6b7280" stroke-width="2" />
+  <circle cx="100" cy="100" r="30" fill="#9ca3af" />
+
+  <!-- Medidor de progresso -->
+  <path 
+    d="M100 10 
+       A90 90 0 0 1 180 100"
+    fill="none" 
+    stroke="#34d399" 
+    stroke-width="10" 
+    stroke-linecap="round"
+  />
+
+  <!-- Seta indicando progresso -->
+  <line x1="100" y1="30" x2="100" y2="100" stroke="#111827" stroke-width="4" />
+  <polygon points="95,40 100,30 105,40" fill="#111827" />
+
+  <!-- Texto "Goal Tracker" -->
+  <text x="50%" y="90%" font-family="Arial, sans-serif" font-size="16" fill="#374151" text-anchor="middle">
+    Goal Tracker
+  </text>
+</svg>
