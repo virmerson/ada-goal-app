@@ -1,18 +1,20 @@
 import { Component, Input } from '@angular/core';
 import { GoalComponent } from '../goal/goal.component';
 import { Goal } from '../goal';
+import { CommonModule } from '@angular/common';
+import { GoalService } from '../goal.service';
 
 @Component({
   selector: 'app-home',
-  imports: [GoalComponent],
+  imports: [CommonModule, GoalComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
   @Input() message= "";
-  goalList: Goal[] = [
-    {id:1, description:'Study AngularJS', hours: 20} ,
-    {id:2, description:'Study ReactJS', hours: 30},
-    {id:3, description:'Study VueJS', hours: 40}
-  ];
+  goalList: Goal[] = [];
+// IoC / DI
+  constructor(private goalService:GoalService){
+    this.goalList = goalService.getAllGoals();
+  }
 }
