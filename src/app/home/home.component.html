@@ -1,5 +1,5 @@
 <p> {{ message}}
 
-  <app-goal *ngFor="let goal of  goalList " [goal]="goal"></app-goal>
+  <app-goal *ngFor="let goal of  goalList " [goal]="goal" (goalDeleted)="onGoalDeleted($event)" ></app-goal>
 
 </p>

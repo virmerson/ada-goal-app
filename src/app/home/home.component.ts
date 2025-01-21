@@ -19,4 +19,8 @@ export class HomeComponent {
         this.goalList =goalList;
     } )
   }
+
+  onGoalDeleted(goalId:string){
+    this.goalList = this.goalList.filter( (goal)=>{ goal.id!=goalId } )
+  }
 }

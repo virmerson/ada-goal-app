@@ -22,4 +22,9 @@ export class GoalService {
     return json;
 
   }
+
+  async delete (id:string){
+    await fetch (`${this.url}/${id}`, {method:'DELETE'})
+  }
+
 }

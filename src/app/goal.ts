@@ -1,5 +1,5 @@
 export interface Goal {
-  id:number;
+  id:string;
   description:string;
   hours:number;
 }
