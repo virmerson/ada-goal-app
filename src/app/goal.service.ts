@@ -27,4 +27,17 @@ export class GoalService {
     await fetch (`${this.url}/${id}`, {method:'DELETE'})
   }
 
+  async addGoal(newGoal:Goal){
+    await fetch (
+      `${this.url}`,
+        {
+          method:'POST',
+          headers:{'Content-type':'application/json'},
+          body:JSON.stringify(newGoal)
+        }
+
+      )
+  }
+
+
 }

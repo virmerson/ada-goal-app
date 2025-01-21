@@ -1,0 +1,16 @@
+<section>
+  <h1> New Goal </h1>
+  <form [formGroup]="newGoalForm" (submit)="submitGoal()">
+        <label for="description">Description</label>
+        <input id="description" formControlName='description'/>
+
+        <label for="hours">Hours</label>
+        <input id="hours" type="number" formControlName='hours'>
+
+        <button type="submit"> Add </button>
+
+        <div>
+          {{notification}}
+        </div>
+  </form>
+</section>

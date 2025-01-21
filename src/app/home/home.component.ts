@@ -21,6 +21,6 @@ export class HomeComponent {
   }
 
   onGoalDeleted(goalId:string){
-    this.goalList = this.goalList.filter( (goal)=>{ goal.id!=goalId } )
+    this.goalList = this.goalList.filter( (goal)=> goal.id!=goalId)
   }
 }
