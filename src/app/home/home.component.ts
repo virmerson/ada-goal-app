@@ -13,8 +13,10 @@ import { GoalService } from '../goal.service';
 export class HomeComponent {
   @Input() message= "";
   goalList: Goal[] = [];
-// IoC / DI
+
   constructor(private goalService:GoalService){
-    this.goalList = goalService.getAllGoals();
+    goalService.getAllGoals().then( (goalList)=>{
+        this.goalList =goalList;
+    } )
   }
 }

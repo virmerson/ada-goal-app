@@ -13,8 +13,12 @@ export class DetailsComponent {
   goal : Goal | undefined
 
   constructor( private goalService: GoalService ){
-    const goalId = Number ( this.route.snapshot.paramMap.get("id") )
-    this.goal = goalService.getGoalById(goalId)
+    const goalId =   this.route.snapshot.paramMap.get("id")
+    if (goalId){
+      goalService.getGoalById(goalId).then((goal)=>{
+        this.goal = goal;
+      })
+    }
   }
 
 }

@@ -1,24 +1,25 @@
 import { Injectable } from '@angular/core';
+import { Goal } from './goal';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GoalService {
-  goalList = [
-    {id:1, description:'Study AngularJS', hours: 20} ,
-    {id:2, description:'Study ReactJS', hours: 30},
-    {id:3, description:'Study VueJS', hours: 40},
-    {id:4, description:'Learn English', hours: 50},
-    {id:5, description:'Learn more about Services', hours: 5},
-  ]
+  goalList:Goal[] = []
+  url = "http://localhost:3000/goals"
   constructor() { }
 
-  getAllGoals(){
-    return this.goalList;
+  async getAllGoals(): Promise<Goal[]>{
+    const data =  await fetch(this.url);
+    const json =   await data.json() ?? [];
+    return json;
   }
 
-  getGoalById(id:number){
+ async getGoalById(id:string):Promise<Goal>{
     // Arrow function
-    return this.goalList.find( (goal)=> goal.id ==id )
+    const data =  await fetch(`${this.url}/${id}`);
+    const json =   await data.json() ?? {};
+    return json;
+
   }
 }
