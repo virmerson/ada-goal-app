@@ -1,29 +1,9 @@
 {
   "goals": [
     {
-      "id": "6581",
-      "description": "tesste",
-      "hours": 10
-    },
-    {
-      "id": "2a00",
-      "description": "asasa",
-      "hours": 111
-    },
-    {
-      "id": "c4ac",
-      "description": "sdasdsad",
-      "hours": 1212
-    },
-    {
-      "id": "711b",
-      "description": "sasaassasa",
-      "hours": 90
-    },
-    {
-      "id": "9497",
-      "description": "Aprender Matemática",
-      "hours": 30
+      "id": "9099",
+      "description": "Back end developer",
+      "hours": 12
     }
   ]
 }

@@ -1,5 +1,16 @@
-<p> {{ message}}
-
-  <app-goal *ngFor="let goal of  goalList " [goal]="goal" (goalDeleted)="onGoalDeleted($event)" ></app-goal>
-
-</p>
+  <section>
+    {{ message}}
+  </section>
+  <section>
+    <form>
+        <input placeholder="Filter the goals" #filter>
+        <button type="button"
+        (click)="filterResults(filter.value)"> Search </button>
+    </form>
+  </section>
+  <section>
+    <app-goal
+    *ngFor="let goal of filteredGoalList "
+    [goal]="goal" (goalDeleted)="onGoalDeleted($event)" >
+  </app-goal>
+  </section>

@@ -11,16 +11,34 @@ import { GoalService } from '../goal.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  @Input() message= "";
+  @Input() message = "";
   goalList: Goal[] = [];
+  filteredGoalList: Goal[] = []
 
-  constructor(private goalService:GoalService){
-    goalService.getAllGoals().then( (goalList)=>{
-        this.goalList =goalList;
-    } )
+  constructor(private goalService: GoalService) {
+    goalService.getAllGoals().then((goalList) => {
+      this.goalList = goalList;
+      this.filteredGoalList = goalList;
+    })
   }
 
-  onGoalDeleted(goalId:string){
-    this.goalList = this.goalList.filter( (goal)=> goal.id!=goalId)
+  onGoalDeleted(goalId: string) {
+    this.goalList = this.goalList.filter((goal) => goal.id != goalId)
+    this.filteredGoalList = this.filteredGoalList.filter((goal) => goal.id != goalId)
+  }
+
+  filterResults(text: string) {
+    if (!text) {
+      this.filteredGoalList = this.goalList;
+    } else {
+      this.filteredGoalList = this.goalList.filter(
+        (goal) => {
+          let goalDescription = goal.description.toLocaleLowerCase();
+          let textInput = text.toLocaleLowerCase();
+          let result = goalDescription.includes(textInput)
+          console.log(`${result} goalDescription: ${goalDescription} textInput: ${textInput}`)
+          return result;
+        })
+    }
   }
 }
