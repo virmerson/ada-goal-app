@@ -39,5 +39,12 @@ export class GoalService {
       )
   }
 
+  async updateGoal(goal:Goal){
+    await fetch (`${this.url}/${goal.id}`, {
+      method:'PUT',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(goal)
+    })
+  }
 
 }

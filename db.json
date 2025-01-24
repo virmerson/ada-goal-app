@@ -2,8 +2,54 @@
   "goals": [
     {
       "id": "9099",
-      "description": "Back end developer",
-      "hours": 12
+      "description": "Back end developer X",
+      "hours": 12000
+    },
+    {
+      "id": "003c",
+      "description": "Back end developer Y",
+      "hours": 100000
+    },
+    {
+      "id": "9097",
+      "description": "fundamentals",
+      "hours": 34
+    },
+    {
+      "id": "3e43",
+      "description": "Emagrecer 10kg",
+      "hours": 100
+    }
+  ],
+
+  "actions":[
+    {
+      "id":"1",
+      "description": "Corrida",
+      "hours": "0.20",
+      "data":"2025-01-20",
+      "goalId": "3e43"
+    },
+    {
+      "id":"2",
+      "description": "Corrida",
+      "hours": "1",
+      "data":"2025-01-21",
+      "goalId": "3e43"
+    },
+    {
+      "id":"3",
+      "description": "Corrida",
+      "hours": "2",
+      "data":"2025-01-22",
+      "goalId": "3e43"
+    },
+    {
+      "id":"4",
+      "description": "Li um cap. de um livro sobre o assunto",
+      "hours": "2",
+      "data":"2025-01-23",
+      "goalId": "9099"
     }
   ]
 }

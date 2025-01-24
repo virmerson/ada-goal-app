@@ -29,4 +29,9 @@ export class GoalComponent {
       })
     }
   }
+  editGoal(){
+    this
+    .router
+    .navigate(['edit-goal', this.goal.id])
+  }
 }
