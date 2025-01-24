@@ -1,0 +1,46 @@
+.results-container{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.goal-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+
+}
+
+.goal-item{
+  flex: 1 1 calc(33.333% - 32px);
+  max-width: 300px;
+  box-sizing: border-box;
+
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+@media(max-width: 960px){
+  .goal-item{
+    flex: 1 1 calc(50% - 32px);
+
+  }
+}
+
+@media(max-width: 600px){
+  .goal-item{
+    flex: 1 1 calc(100% - 32px);
+
+  }
+}
+

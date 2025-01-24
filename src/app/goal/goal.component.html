@@ -1,7 +1,19 @@
-<p>
- {{goal.description}}
+<mat-card class="goal-card">
 
- <button (click)="seeDetails()"> More</button>
- <button (click)="deleteGoal()"> Delete</button>
- <button (click)="editGoal()"> Edit </button>
-</p>
+  <mat-card-header>
+    <mat-card-title> {{goal.description}} </mat-card-title>
+    <mat-card-subtitle> {{goal.hours}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions>
+    <button mat-icon-button (click)="seeDetails()">
+        <mat-icon>info</mat-icon>
+    </button>
+    <button mat-icon-button (click)="deleteGoal()">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <button  mat-icon-button (click)="editGoal()">
+        <mat-icon>edit</mat-icon>
+    </button>
+  </mat-card-actions>
+
+</mat-card>

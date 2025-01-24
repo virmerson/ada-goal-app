@@ -1,16 +1,21 @@
   <section>
-    {{ message}}
-  </section>
-  <section>
     <form>
-        <input placeholder="Filter the goals" #filter>
+        <mat-form-field appearance="fill">
+          <mat-label>Filter the goals</mat-label>
+          <input matInput  #filter>
+        </mat-form-field>
         <button type="button"
+        mat-raised-button
         (click)="filterResults(filter.value)"> Search </button>
     </form>
   </section>
-  <section>
-    <app-goal
-    *ngFor="let goal of filteredGoalList "
-    [goal]="goal" (goalDeleted)="onGoalDeleted($event)" >
-  </app-goal>
+  <section class="results-container">
+    <div class="goal-list">
+      <app-goal
+      class="goal-item"
+      *ngFor="let goal of filteredGoalList "
+      [goal]="goal" (goalDeleted)="onGoalDeleted($event)" >
+      </app-goal>
+    </div>
+
   </section>

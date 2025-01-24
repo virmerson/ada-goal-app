@@ -3,10 +3,14 @@ import { GoalComponent } from '../goal/goal.component';
 import { Goal } from '../goal';
 import { CommonModule } from '@angular/common';
 import { GoalService } from '../goal.service';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, GoalComponent],
+  imports: [CommonModule, GoalComponent, MatInputModule, MatFormFieldModule, MatButtonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

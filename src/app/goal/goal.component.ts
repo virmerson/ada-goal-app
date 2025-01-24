@@ -2,11 +2,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Goal } from '../goal';
 import { RouterModule, Router } from '@angular/router';
 import { GoalService } from '../goal.service';
-
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-goal',
-  imports: [RouterModule],
+  imports: [RouterModule, MatCardModule, MatIconModule],
   templateUrl: './goal.component.html',
   styleUrl: './goal.component.css'
 })
