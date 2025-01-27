@@ -3,12 +3,15 @@ import { ActivatedRoute } from '@angular/router';
 import { GoalService } from '../goal.service';
 import { Goal } from '../goal';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatFormField, MatFormFieldModule, MatLabel } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-edit-goal',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, MatFormField, MatFormFieldModule, MatInputModule, MatButtonModule, MatLabel],
   templateUrl: './edit-goal.component.html',
-  styleUrl: './edit-goal.component.css'
+  styleUrls: ['./edit-goal.component.css', '../../styles/form-styles.css']
 })
 export class EditGoalComponent {
 

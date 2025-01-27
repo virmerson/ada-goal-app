@@ -1,13 +1,17 @@
 <section>
   <h1> New Goal </h1>
   <form [formGroup]="newGoalForm" (submit)="submitGoal()">
-        <label for="description">Description</label>
-        <input id="description" formControlName='description'/>
+    <mat-form-field>
+      <mat-label for="description">Description </mat-label>
+      <input matInput id="description" formControlName="description"/>
+    </mat-form-field>
 
-        <label for="hours">Hours</label>
-        <input id="hours" type="number" formControlName='hours'>
+    <mat-form-field>
+      <mat-label for="hours"> Hours </mat-label>
+      <input matInput id="hours" type="number" formControlName="hours" />
+    </mat-form-field>
 
-        <button type="submit"> Add </button>
+      <button mat-raised-button color="primary" type="submit">  Add </button>
 
         <div>
           {{notification}}

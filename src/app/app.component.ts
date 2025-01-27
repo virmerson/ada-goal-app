@@ -1,6 +1,6 @@
 import { Component, HostListener, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSidenav, MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
@@ -18,7 +18,7 @@ export class AppComponent {
 
   isScreenSmall =false;
 
-  // @ViewChild('sidenav') sidenav!:MatSidenav
+   @ViewChild('sidenav') sidenav!:MatSidenav;
 
   @HostListener('window:resize', ['$event'])
   onResize(event:any){
@@ -31,9 +31,9 @@ export class AppComponent {
   }
 
   closeSidenav(){
-    // if (this.isScreenSmall){
-    //   this.sidenav.close();
-    // }
+    if (this.isScreenSmall){
+      this.sidenav.close();
+    }
   }
 }
 
